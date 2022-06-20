@@ -1,20 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:08:05 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/20 12:28:02 by gabrielagen      ###   ########.fr       */
+/*   Created: 2022/06/20 12:02:47 by gabrielagen       #+#    #+#             */
+/*   Updated: 2022/06/20 12:02:58 by gabrielagen      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	main(int argc, char **argv)
-{
-	t_ps	ps;
-	
-	if (argc == 2)
-}

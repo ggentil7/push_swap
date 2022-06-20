@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+         #
+#    By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 15:04:19 by ggentil           #+#    #+#              #
-#    Updated: 2022/06/16 15:23:34 by ggentil          ###   ########.fr        #
+#    Updated: 2022/06/20 12:45:27 by gabrielagen      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 
-SRCS	= push_swap.c 
+SRCS	= push_swap.c error.c malloc.c push.c rotate.c swap.c reverse_rotate.c 
 
 OBJS	= $(SRCS:.c=.o)
 

@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:08:05 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/20 12:28:02 by gabrielagen      ###   ########.fr       */
+/*   Created: 2022/06/20 11:54:46 by gabrielagen       #+#    #+#             */
+/*   Updated: 2022/06/20 16:37:55 by gabrielagen      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	ft_ra(t_ps *ps)
 {
-	t_ps	ps;
+	int	tmp;
 	
-	if (argc == 2)
 }

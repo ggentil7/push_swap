@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:08:05 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/20 12:28:02 by gabrielagen      ###   ########.fr       */
+/*   Created: 2022/06/20 12:14:09 by gabrielagen       #+#    #+#             */
+/*   Updated: 2022/06/20 13:01:04 by gabrielagen      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	string_conv(t_ps *ps, char **argv)
 {
-	t_ps	ps;
+	char	**tmp;
+	int		i;
+
+	i = -1;
+	tmp = ft_split(*argv, ' ');
+	while (tmp[++i])
 	
-	if (argc == 2)
 }

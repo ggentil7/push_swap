@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:08:05 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/20 12:28:02 by gabrielagen      ###   ########.fr       */
+/*   Created: 2022/06/20 11:54:17 by gabrielagen       #+#    #+#             */
+/*   Updated: 2022/06/20 14:42:56 by gabrielagen      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	ft_sa(t_ps *ps)
 {
-	t_ps	ps;
-	
-	if (argc == 2)
+	int	tmp;
+
+	tmp = 0;
+	tmp = ps->a[0];
+	ps->a[0] = ps->a[1];
+	ps->a[1] = tmp;
+}
+
+void	ft_sb(t_ps *ps)
+{
+	int	tmp;
+
+	tmp = 0;
+	tmp = ps->b[0];
+	ps->b[0] = ps->b[1];
+	ps->b[1] = tmp;
+}
+
+void	ft_ss(t_ps *ps)
+{
+	ft_sa(ps);
+	ft_sb(ps);
 }
