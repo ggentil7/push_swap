@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 12:14:09 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/22 17:00:30 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/22 18:06:53 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,16 @@ void	check_args(t_ps *ps, int argc, char **argv)
 	j = 0;
 	if (argc == 3)
 		string_conv(ps, argv);
-	while (argv[i])
+	else if (argc != 2)
 	{
-		ps->a[j] = ft_atoi(argv[i]);
-		i++;
-		j++;
+		malloc_all(ps, 0, argc - 1);
+		while (argv[i])
+		{
+			ps->a[j] = ft_atoi(argv[i]);
+			i++;
+			j++;
+		}
+		ps->compt_a = argc - 1;
 	}
+	ps->compt_b = 0;
 }
