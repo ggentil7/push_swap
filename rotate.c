@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+        */
+/*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:54:46 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/20 16:37:55 by gabrielagen      ###   ########.fr       */
+/*   Updated: 2022/06/22 14:33:08 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_ra(t_ps *ps)
 {
-	int	tmp;
-	
+	int	tmp;	
 }

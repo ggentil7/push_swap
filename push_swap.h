@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+        */
+/*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/20 14:48:40 by gabrielagen      ###   ########.fr       */
+/*   Updated: 2022/06/22 15:21:27 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_ps {
 	int	*b;
 	int	*temp;
 	int	compt_a;
-	int	compt_b,
+	int	compt_b;
 }	t_ps;
 
 void	ft_sa(t_ps *ps);
@@ -34,7 +34,9 @@ void	ft_ss(t_ps *ps);
 void	ft_pa(t_ps *ps);
 void	ft_pb(t_ps *ps);
 
+void	check_args(t_ps *ps, int argc, char **argv);
 void	malloc_all(t_ps *ps, int n, int size);
 void	string_conv(t_ps *ps, char **argv);
+void	check_doublon(t_ps *ps);
 
 #endif
