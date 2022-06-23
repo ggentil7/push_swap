@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:54:17 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/22 14:33:11 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/23 15:20:24 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	ft_ss(t_ps *ps)
 {
 	ft_sa(ps);
 	ft_sb(ps);
+	ft_printf("ss\n");
 }

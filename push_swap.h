@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/22 15:21:27 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/23 17:29:32 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,14 @@ typedef struct s_ps {
 void	ft_sa(t_ps *ps);
 void	ft_sb(t_ps *ps);
 void	ft_ss(t_ps *ps);
+
+void	ft_ra(t_ps *ps);
+void	ft_rb(t_ps *ps);
+void	ft_rr(t_ps *ps);
+
+void	ft_rra(t_ps *ps);
+void	ft_rrb(t_ps *ps);
+void	ft_rrr(t_ps *ps);
 
 void	ft_pa(t_ps *ps);
 void	ft_pb(t_ps *ps);
