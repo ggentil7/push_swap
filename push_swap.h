@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/27 19:56:25 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/27 21:43:54 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 typedef struct s_ps {
 	int	*a;
 	int	*b;
+	int	*tmp_a;
+	int	*tmp_b;
 	int	*temp;
 	int	size_a;
 	int	size_b;
