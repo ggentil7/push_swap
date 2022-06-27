@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/23 17:29:32 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/27 19:56:25 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@
 # include <unistd.h>
 # include <string.h>
 # include "./ft_printf/ft_printf.h"
+# include <limits.h>
 
 typedef struct s_ps {
 	int	*a;
 	int	*b;
 	int	*temp;
-	int	compt_a;
-	int	compt_b;
+	int	size_a;
+	int	size_b;
 }	t_ps;
 
 void	ft_sa(t_ps *ps);
@@ -42,9 +43,12 @@ void	ft_rrr(t_ps *ps);
 void	ft_pa(t_ps *ps);
 void	ft_pb(t_ps *ps);
 
-void	check_args(t_ps *ps, int argc, char **argv);
+int		check_isdigit(char **argv);
+int		check_isint(char **argv);
+int		check_doublon(t_ps *ps);
+int		check_sorted(t_ps *ps);
+void	fill_stack(t_ps *ps, int argc, char **argv);
 void	malloc_all(t_ps *ps, int n, int size);
 void	string_conv(t_ps *ps, char **argv);
-void	check_doublon(t_ps *ps);
 
 #endif

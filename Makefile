@@ -6,7 +6,7 @@
 #    By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 15:04:19 by ggentil           #+#    #+#              #
-#    Updated: 2022/06/23 17:49:45 by ggentil          ###   ########.fr        #
+#    Updated: 2022/06/27 18:48:50 by ggentil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,6 @@ fclean:	clean
 		make fclean -C $(SRC_LIB)
 		make fclean -C $(SRC_PRINTF)
 
-re:		fclean all
+re:		fclean $(NAME)
 
 .PHONY:	all clean fclean re 

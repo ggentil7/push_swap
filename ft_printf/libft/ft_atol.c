@@ -1,52 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 11:54:46 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/27 19:48:53 by ggentil          ###   ########.fr       */
+/*   Created: 2022/06/27 18:54:30 by ggentil           #+#    #+#             */
+/*   Updated: 2022/06/27 19:20:02 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	ft_ra(t_ps *ps)
+long	ft_atol(const char *str)
 {
-	int	tmp;
-	int	i;
+	long int	i;
+	long int	sign;
+	long int	numero;
 
 	i = 0;
-	tmp = ps->a[0];
-	while (i < ps->size_a - 1)
+	sign = 1;
+	numero = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\f' || str[i] == '\r' || str[i] == '\v')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		ps->a[i] = ps->a[i + 1];
+		if (str[i] == '-')
+			sign = sign * (-1);
 		i++;
 	}
-	ps->a[i] = tmp;
-	ft_printf("ra\n");
-}
-
-void	ft_rb(t_ps *ps)
-{
-	int	tmp;
-	int	i;
-
-	i = 0;
-	tmp = ps->b[0];
-	while (i < ps->size_b - 1)
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
-		ps->b[i] = ps->b[i + 1];
+		numero = numero * 10 + str[i] - '0';
 		i++;
 	}
-	ps->b[i] = tmp;
-	ft_printf("rb\n");
-}
-
-void	ft_rr(t_ps *ps)
-{
-	ft_ra(ps);
-	ft_rb(ps);
-	ft_printf("rr\n");
+	return (numero * sign);
 }
