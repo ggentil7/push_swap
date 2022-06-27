@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:54:46 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/23 15:30:37 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/23 17:47:34 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_ra(t_ps *ps)
 	tmp = ps->a[0];
 	while (i < ps->compt_a - 1)
 	{
-		ps->compt_a[i] = ps->compt_a[i + 1];
+		ps->a[i] = ps->a[i + 1];
 		i++;
 	}
 	ps->a[i] = tmp;
@@ -37,7 +37,7 @@ void	ft_rb(t_ps *ps)
 	tmp = ps->b[0];
 	while (i < ps->compt_b - 1)
 	{
-		ps->compt_b[i] = ps->compt_b[i + 1];
+		ps->b[i] = ps->b[i + 1];
 		i++;
 	}
 	ps->b[i] = tmp;

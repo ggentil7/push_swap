@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 12:14:09 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/22 18:06:53 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/23 17:47:43 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	check_doublon(t_ps *ps)
 		i = j + 1;
 		while (i < ps->compt_a)
 		{
-			if (ps->compt_a[j] != ps->compt_a[i])
+			if (ps->a[j] != ps->a[i])
 				i++;
 			else
 				ft_printf("Error:\n Doublon\n");

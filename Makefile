@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabrielagentil <gabrielagentil@student.    +#+  +:+       +#+         #
+#    By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 15:04:19 by ggentil           #+#    #+#              #
-#    Updated: 2022/06/20 12:45:27 by gabrielagen      ###   ########.fr        #
+#    Updated: 2022/06/23 17:49:45 by ggentil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ clean:
 		make clean -C $(SRC_LIB)
 		make clean -C $(SRC_LIB)
 		
-flcean:	clean
+fclean:	clean
 		rm -rf $(NAME)
 		make fclean -C $(SRC_LIB)
 		make fclean -C $(SRC_PRINTF)
