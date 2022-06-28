@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/27 21:43:54 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/28 22:06:33 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,13 @@ int		check_isdigit(char **argv);
 int		check_isint(char **argv);
 int		check_doublon(t_ps *ps);
 int		check_sorted(t_ps *ps);
+int		ft_solve(t_ps *ps);
+int		ft_solve3(t_ps *ps);
+int		ft_solve5(t_ps *ps);
+int		find_min(t_ps *ps);
+int		find_max(t_ps *ps);
+int		print_stack(t_ps *ps);
+
 void	fill_stack(t_ps *ps, int argc, char **argv);
 void	malloc_all(t_ps *ps, int n, int size);
 void	string_conv(t_ps *ps, char **argv);

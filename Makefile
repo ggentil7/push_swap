@@ -6,13 +6,14 @@
 #    By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 15:04:19 by ggentil           #+#    #+#              #
-#    Updated: 2022/06/28 20:40:35 by ggentil          ###   ########.fr        #
+#    Updated: 2022/06/28 21:12:22 by ggentil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 
-SRCS	= push_swap.c check.c utils.c push.c rotate.c swap.c reverse_rotate.c 
+SRCS	= push_swap.c check.c utils.c push.c rotate.c swap.c reverse_rotate.c \
+			solve.c 
 
 OBJS	= $(SRCS:.c=.o)
 

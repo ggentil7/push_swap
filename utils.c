@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:39:10 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/28 20:40:14 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/28 21:13:18 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,19 @@ void	malloc_all(t_ps *ps, int n, int size)
 		ps->b = malloc(sizeof(int) * size);
 	if (n == 3)
 		ps->temp = malloc(sizeof(int) * size);
+}
+
+int	print_stack(t_ps *ps)
+{
+	int	i;
+
+	i = 0;
+	ft_printf("stack a:\n");
+	while (i < ps->size_a)
+	{
+		ft_printf("%d ", ps->a[i]);
+		ft_printf("\n");
+		i++;
+	}
+	return (0);
 }
