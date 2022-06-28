@@ -6,7 +6,7 @@
 #    By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 15:04:19 by ggentil           #+#    #+#              #
-#    Updated: 2022/06/27 18:48:50 by ggentil          ###   ########.fr        #
+#    Updated: 2022/06/28 18:42:57 by ggentil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS	= push_swap.c error.c malloc.c push.c rotate.c swap.c reverse_rotate.c
 
 OBJS	= $(SRCS:.c=.o)
 
-FLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 
 CC		= gcc
 
@@ -35,7 +35,7 @@ start:
 		$(MAKE) -C $(SRC_PRINTF)
 
 push_swap:
-		$(CC) $(SRCS) $(LIB) $(PRINTF) $(FLAGS) -o $(NAME)
+		$(CC) $(SRCS) $(LIB) $(PRINTF) $(CFLAGS) -o $(NAME)
 
 clean:
 		rm -rf $(OBJS)

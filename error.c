@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 12:14:09 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/27 22:32:02 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/28 19:19:21 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ void	fill_stack(t_ps *ps, int argc, char **argv)
 		string_conv(ps, argv);
 	else if (argc != 2)
 	{
-		malloc_all(ps, 1, argc - 1);
+		malloc_all(ps, 0, argc - 1);
 		while (argv[j])
 		{
 			ps->a[i] = ft_atoi(argv[j]);
@@ -129,7 +129,7 @@ int	check_sorted(t_ps *ps)
 	int	i;
 
 	i = 0;
-	while (ps->a[i] && ps->a[i + 1])
+	while (i < ps->size_a - 1)
 	{
 		if (ps->a[i] > ps->a[i + 1])
 			return (0);
