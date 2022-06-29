@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/28 22:06:33 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/29 19:36:41 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include "./ft_printf/ft_printf.h"
 # include <limits.h>
+# include "./ft_printf/ft_printf.h"
 
 typedef struct s_ps {
 	int	*a;
@@ -51,7 +51,7 @@ int		check_doublon(t_ps *ps);
 int		check_sorted(t_ps *ps);
 int		ft_solve(t_ps *ps);
 int		ft_solve3(t_ps *ps);
-int		ft_solve5(t_ps *ps);
+int		ft_solve_4_5(t_ps *ps);
 int		find_min(t_ps *ps);
 int		find_max(t_ps *ps);
 int		print_stack(t_ps *ps);

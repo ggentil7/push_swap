@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 15:08:05 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/28 22:06:47 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/29 19:20:39 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,5 @@ int	main(int argc, char **argv)
 	if (ft_solve(&ps))
 		return (1);
 	print_stack(&ps);
-	ft_printf("%d", find_min(&ps));
-	ft_printf("%d", find_max(&ps));
 	return (0);
 }

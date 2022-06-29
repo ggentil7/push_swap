@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:53:58 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/28 19:02:28 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/29 19:35:17 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_pa(t_ps *ps)
 	i = -1;
 	if (ps->b && ps->size_b > 0)
 	{
-		printf("size_a = %d\n", ps->size_a);
 		ps->tmp_a = malloc(sizeof(int) * (ps->size_a + 1));
 		ps->tmp_a[0] = ps->b[0];
 		while (ps->a && ++i < ps->size_a)
@@ -46,7 +45,6 @@ void	ft_pb(t_ps *ps)
 	i = -1;
 	if (ps->a && ps->size_a > 0)
 	{
-		printf("size_b = %d\n", ps->size_b);
 		ps->tmp_b = malloc(sizeof(int) * (ps->size_b + 1));
 		ps->tmp_b[0] = ps->a[0];
 		while (ps->b && ++i < ps->size_b)
