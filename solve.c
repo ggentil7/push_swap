@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:55:50 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/30 16:25:13 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/30 18:39:14 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_solve(t_ps *ps)
 	if (ps->size_a == 4 || ps->size_a == 5)
 		ft_solve_4_5(ps);
 	else
-		normalize(ps);
+		radix(ps);
 	return (0);
 }
 
