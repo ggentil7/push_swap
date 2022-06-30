@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/29 19:36:41 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/30 16:39:15 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ int		ft_solve3(t_ps *ps);
 int		ft_solve_4_5(t_ps *ps);
 int		find_min(t_ps *ps);
 int		find_max(t_ps *ps);
-int		print_stack(t_ps *ps);
+int		normalize(t_ps *ps);
+int		bubble_sort(t_ps *ps);
+int		print_stack(t_ps *ps, int *stack);
 
 void	fill_stack(t_ps *ps, int argc, char **argv);
 void	malloc_all(t_ps *ps, int n, int size);

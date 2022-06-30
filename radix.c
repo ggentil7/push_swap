@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:08:05 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/30 16:25:32 by ggentil          ###   ########.fr       */
+/*   Created: 2022/06/30 15:39:07 by ggentil           #+#    #+#             */
+/*   Updated: 2022/06/30 16:39:00 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	normalize(t_ps *ps)
 {
-	t_ps	ps;
+	int	i;
+	int	j;
+	int	*normalize;
 
-	if (check_isdigit(argv))
-		return (1);
-	if (check_isint(argv))
-		return (1);
-	fill_stack(&ps, argc, argv);
-	if (check_doublon(&ps))
-		return (1);
-	if (check_sorted(&ps))
-		return (0);
-	if (ft_solve(&ps))
-		return (1);
-	print_stack(&ps, ps.a);
+	i = -1;
+	j = -1;
+	normalize = malloc(sizeof(int) * (ps->size_a));
+	while (++i < ps->size_a)
+		normalize[i] = -1;
+	i = -1;
+	while (++i < ps->size_a)
+	{
+		normalize[0] = ps->a[find_min(ps)];
+	}
+	print_stack(ps, normalize);
 	return (0);
+}
+
+int	bubble_sort(t_ps *ps)
+{
+	
 }

@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:55:50 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/29 19:36:23 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/06/30 16:25:13 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_solve(t_ps *ps)
 		ft_solve3(ps);
 	if (ps->size_a == 4 || ps->size_a == 5)
 		ft_solve_4_5(ps);
+	else
+		normalize(ps);
 	return (0);
 }
 
@@ -54,10 +56,12 @@ int	ft_solve_4_5(t_ps *ps)
 		i++;
 	}
 	ft_solve3(ps);
+	print_stack(ps, ps->a);
 	ft_pa(ps);
 	ft_pa(ps);
-	if (ps->a[0] > ps->a[1])
-		ft_ra(ps);
+	if (ps->a[0] < ps->a[1])
+		ft_sa(ps);
+	ft_ra(ps);
 	return (0);
 }
 
