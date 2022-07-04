@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:39:07 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/30 18:50:47 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/04 18:29:58 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	*bubble_sort(t_ps *ps, int *sorted)
 	return (sorted);
 }
 
-int	radix(t_ps *ps)
+/*int	radix(t_ps *ps)
 {
 	int	i;
 	int	bits;
@@ -87,3 +87,46 @@ int	radix(t_ps *ps)
 	}
 	return (0);
 }
+
+int	bit_compt(t_ps *ps)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = ps->size_a;
+	while (len)
+	{
+		len = len / 2;
+		i++;
+	}
+	return (i + 1);
+}
+
+void	radix(t_ps *ps)
+{
+	int	i;
+	int	y;
+	int	len;
+
+	i = -1;
+	y = 0;
+	len = bit_compt(ps);
+	while (++i < len && !check_sorted(ps))
+	{
+		y = ps->size_a;
+		while (y-- > 0)
+		{
+			if (ps->a[0] >> i & 1)
+				ft_ra(ps);
+			else
+				ft_pb(ps);
+		}
+		y = ps->size_b;
+		while (ps->b)
+			ft_pa(ps);
+	}
+	y = ps->size_b;
+	while (y-- > 0)
+		ft_pa(ps);
+}*/

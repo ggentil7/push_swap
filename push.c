@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:53:58 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/30 16:02:27 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/04 17:06:01 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ void	ft_pa(t_ps *ps)
 		free(ps->b);
 		ps->b = ps->tmp_b;
 		ft_printf("pa\n");
+		/*i = -1;
+		while (++i < ps->size_a)
+		{
+			printf("ps->a[%d] = '%d', ps->b[%d] = '%d'", i, ps->a[i], i, ps->b[i]);
+		}*/
 	}
 }
 
