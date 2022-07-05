@@ -6,7 +6,7 @@
 #    By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 15:04:19 by ggentil           #+#    #+#              #
-#    Updated: 2022/06/30 15:40:32 by ggentil          ###   ########.fr        #
+#    Updated: 2022/07/05 21:59:31 by ggentil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS	= push_swap.c check.c utils.c push.c rotate.c swap.c reverse_rotate.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS	= -Wall -Wextra -Werror -g #-fsanitize=address -fno-omit-frame-pointer
 
 CC		= gcc
 

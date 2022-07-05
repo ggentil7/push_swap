@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:39:10 by ggentil           #+#    #+#             */
-/*   Updated: 2022/06/30 16:23:54 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/05 21:57:38 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	malloc_all(t_ps *ps, int n, int size)
 	if (n == 0)
 	{
 		ps->a = malloc(sizeof(int) * size);
+		printf("a -> %p\n", ps->a);
 		ps->b = malloc(sizeof(int) * size);
 		ps->temp = malloc(sizeof(int) * size);
 	}
@@ -71,7 +72,7 @@ void	malloc_all(t_ps *ps, int n, int size)
 		ps->temp = malloc(sizeof(int) * size);
 }
 
-int	print_stack(t_ps *ps, int *stack)
+/*int	print_stack(t_ps *ps, int *stack)
 {
 	int	i;
 
@@ -85,3 +86,28 @@ int	print_stack(t_ps *ps, int *stack)
 	}
 	return (0);
 }
+
+int	debug_stack(t_ps *ps)
+{
+	int	i;
+
+	i = 0;
+	ft_printf("stack a:\n");
+	while (i < ps->size_a)
+	{
+		ft_printf("%d ", ps->a[i]);
+		ft_printf(" ");
+		i++;
+	}
+	ft_printf("\n");
+	ft_printf("stack b:\n");
+	i = 0;
+	while (i < ps->size_b)
+	{
+		ft_printf("%d ", ps->b[i]);
+		ft_printf(" ");
+		i++;
+	}
+	ft_printf("\n");
+	return (0);
+}*/

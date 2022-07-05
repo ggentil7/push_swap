@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 12:14:09 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/06/28 20:39:58 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/05 19:24:33 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ int	check_sorted(t_ps *ps)
 	int	i;
 
 	i = 0;
+	//debug_stack(ps);
 	while (i < ps->size_a - 1)
 	{
 		if (ps->a[i] > ps->a[i + 1])
