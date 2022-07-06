@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ggentil <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 17:27:44 by ggentil           #+#    #+#             */
-/*   Updated: 2021/10/29 14:02:22 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/06 19:03:34 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_isdigit(int c)
 {
-	return (c >= 48 && c <= 57);
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }

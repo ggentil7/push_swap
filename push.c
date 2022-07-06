@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:53:58 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/07/05 20:46:39 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/06 14:00:07 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	ft_pa(t_ps *ps)
 		ps->size_a++;
 		if (ps->a)
 			free(ps->a);
+		ps->a = NULL;
 		ps->a = ps->tmp_a;
 		ps->tmp_b = malloc(sizeof(int) * (ps->size_b - 1));
 		i = 0;
@@ -33,6 +34,7 @@ void	ft_pa(t_ps *ps)
 			ps->tmp_b[i - 1] = ps->b[i];
 		ps->size_b--;
 		free(ps->b);
+		ps->b = NULL;
 		ps->b = ps->tmp_b;
 		ft_printf("pa\n");
 	}
@@ -52,6 +54,7 @@ void	ft_pb(t_ps *ps)
 		ps->size_b++;
 		if (ps->b)
 			free(ps->b);
+		ps->b = NULL;
 		ps->b = ps->tmp_b;
 		ps->tmp_a = malloc(sizeof(int) * (ps->size_a - 1));
 		i = 0;
@@ -59,6 +62,7 @@ void	ft_pb(t_ps *ps)
 			ps->tmp_a[i - 1] = ps->a[i];
 		ps->size_a--;
 		free(ps->a);
+		ps->a = NULL;
 		ps->a = ps->tmp_a;
 		ft_printf("pb\n");
 	}

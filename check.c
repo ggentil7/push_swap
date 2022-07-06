@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 12:14:09 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/07/05 19:24:33 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/06 19:24:17 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,17 @@ int	check_isdigit(char **argv)
 		j = 0;
 		while (argv[i][j])
 		{
-			if (argv[i][j] == '-')
+			if (argv[i][j] == '-' || argv[i][j] == ' ')
+			{
 				j++;
+				continue ;
+			}
 			if (ft_isdigit(argv[i][j]))
 				j++;
 			else
 			{
-				ft_printf("Error: arguments\n");
-				return (1);
+				ft_printf("Error\n");
+				exit(1);
 			}
 		}
 		i++;
@@ -47,7 +50,7 @@ int	check_isint(char **argv)
 	{
 		if (ft_atol(argv[i]) > INT_MAX || ft_atol(argv[i]) < INT_MIN)
 		{
-			ft_printf("Error: arguments\n");
+			ft_printf("Error\n");
 			return (1);
 		}
 		else
@@ -72,8 +75,8 @@ int	check_doublon(t_ps *ps)
 				i++;
 			else
 			{
-				ft_printf("Error:\n Doublon\n");
-				return (1);
+				ft_printf("Error\n");
+				exit (1);
 			}
 		}
 		j++;
@@ -86,7 +89,6 @@ int	check_sorted(t_ps *ps)
 	int	i;
 
 	i = 0;
-	//debug_stack(ps);
 	while (i < ps->size_a - 1)
 	{
 		if (ps->a[i] > ps->a[i + 1])

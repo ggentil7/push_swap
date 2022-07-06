@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:39:07 by ggentil           #+#    #+#             */
-/*   Updated: 2022/07/05 21:01:53 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/06 14:27:37 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,9 @@ int	normalize(t_ps *ps)
 
 	i = 0;
 	normalize = malloc(sizeof(int) * (ps->size_a));
+	if (!normalize)
+		exit(1);
 	normalize = bubble_sort(ps, normalize);
-	/*while (i < ps->size_a)
-	{
-		ft_printf("normalize = %d ", normalize[i]);
-		ft_printf(" ");
-		i++;
-	}
-	i = 0;*/
 	while (i < ps->size_a)
 	{
 		j = 0;
@@ -39,12 +34,10 @@ int	normalize(t_ps *ps)
 		}
 		i++;
 	}
+	free (ps->a);
+	ps->a = NULL;
 	ps->a = ps->temp;
-	free(normalize);
-	// i = -1;
-	// while (++i < ps->size_a)
-	// 	free (ps->temp);
-	//free (ps->temp);
+	free (normalize);
 	return (0);
 }
 
@@ -89,7 +82,6 @@ int	radix(t_ps *ps)
 		i = -1;
 		while (++i < ps->size_a + ps->size_b)
 		{
-			//ft_printf("ps->a = %d\n", ps->size_a);
 			if (((ps->a[0] >> bits) & 1) == 1)
 				ft_ra(ps);
 			else

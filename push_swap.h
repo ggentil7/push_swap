@@ -6,7 +6,7 @@
 /*   By: ggentil <ggentil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:48:48 by gabrielagen       #+#    #+#             */
-/*   Updated: 2022/07/05 20:25:12 by ggentil          ###   ########.fr       */
+/*   Updated: 2022/07/06 19:18:49 by ggentil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,16 @@ int		check_doublon(t_ps *ps);
 int		check_sorted(t_ps *ps);
 int		ft_solve(t_ps *ps);
 int		ft_solve3(t_ps *ps);
-int		ft_solve_4_5(t_ps *ps);
-int		find_min(t_ps *ps);
+int		ft_solve4(t_ps *ps);
+int		ft_solve5(t_ps *ps);
 int		find_max(t_ps *ps);
 int		normalize(t_ps *ps);
 int		radix(t_ps *ps);
 int		*bubble_sort(t_ps *ps, int *sorted);
-int		print_stack(t_ps *ps, int *stack);
-int		debug_stack(t_ps *ps);
 
 void	fill_stack(t_ps *ps, int argc, char **argv);
 void	malloc_all(t_ps *ps, int n, int size);
 void	string_conv(t_ps *ps, char **argv);
-void	push_max_to_the_top(t_ps *ps, int i);
+void	push_to_the_top(t_ps *ps);
 
 #endif
